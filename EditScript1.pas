@@ -36,11 +36,12 @@ Begin
      Area := Board.SnapGridSize*2.1;
      Board.ChooseLocation(X,Y, 'Choose Component1');
 
-     if (Board.CurrentLayer = eTopOverlay)| (Board.CurrentLayer = eTopPaste )  then
+     if (Board.CurrentLayer = eTopOverlay)| (Board.CurrentLayer = eTopPaste ) | (Board.CurrentLayer = eTopLayer )  then
      CurrentLayer := eTopLayer;
 
-     if (Board.CurrentLayer = eBottomOverlay) | (Board.CurrentLayer = eBottomPaste ) then
+     if (Board.CurrentLayer = eBottomOverlay) | (Board.CurrentLayer = eBottomPaste ) | (Board.CurrentLayer = eBottomLayer ) then
      CurrentLayer := eBottomLayer;
+
 
 
      i := 0;
